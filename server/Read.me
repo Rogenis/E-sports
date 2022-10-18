@@ -1,0 +1,50 @@
+1 -> npm init -y
+2 -> npm install express
+3 -> Alterar no package o caminho do arquivo main.
+-> Trocar o nome do arquivo principal colocando mjs. ex: server.mjs
+
+4 -> npm i typescript - instalar typescript (usando somente em desenvolvimento pois node so entende javascript)
+-> Trocar o nome do arquivo principal colocando ts. ex: server.ts
+
+5 -> Adicionar no package na seção script, o "build" com valor jsc (para node convertertypescript para javascript).
+6 -> npx tsc --init (cria arquivo de configuraçãoo do typescript)
+7 -> No arquivo de configuração (tsconfig), descomentar o campo "rootDir" (fica abaixo do module), e alterar para "./src"
+8 -> No arquivo de configuração (tsconfig), descomentar o campo "outDir", e alterar para "./build" (aqruivos js serão criadoa na pasta build)
+9 -> No arquivo de configuração (tsconfig), descomentar o campo "moduleResolution".
+10 -> npm i --save-dev @types/express
+11 -> npm i ts-node-dev -D
+12 -> Adicionar no package na seção script, o "dev" com valor "tsnd src/server.ts"
+13 -> npx run build (cria o arquivo js que será compilado)
+14 -> Rodar projeto com typescript: npm run dev[´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´]
+14 -> Rodar o projeto: node src/server.js
+
+# BACKEND
+
+## Entidades
+
+### Game - 
+id 
+title
+bannerUrl
+
+### AD - 
+id 
+gameId
+name
+yearsPlaying
+discord
+weekDays
+hourStart
+hourEnd
+useVoiceChannel
+createAt
+
+## Casos de uso
+
+- Listagem dos games
+- publicar anúncio
+- Listagem de anuncios
+- Buscar discord pelo id
+
+- npm i prisma
+ npx prisma init --datasource-provider SQLite
